@@ -4,7 +4,13 @@ import { createSlice } from "@reduxjs/toolkit";
 export const todoSlice = createSlice({
   name: "todo",
   initialState: {
-    todoList: [],
+    todoList: [
+      { id: 1, title: "제목1", content: "내용1", isDone: false },
+      { id: 2, title: "제목2", content: "내용2", isDone: false },
+      { id: 3, title: "제목3", content: "내용3", isDone: true },
+      { id: 4, title: "제목4", content: "내용4", isDone: true },
+      { id: 5, title: "제목5", content: "내용5", isDone: true },
+    ],
   },
   reducers: {
     addTodo: (state, action) => {
@@ -15,6 +21,7 @@ export const todoSlice = createSlice({
     },
     toggleTodo: (state, action) => {
       // TODO: 투두의 isDone 속성값(boolean)을 토글링하도록 상태변경 해보세요.
+      console.log(state);
     },
   },
 });
